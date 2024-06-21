@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: bRequest-box;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .bd-footer {
+            background-color: black;
+            color: white;
+        }
+        .flex-grow-1 {
+            flex-grow: 1;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 5px;
+            background-color: blueviolet;
+        }
+        p {
+            font-size: 20px;
+            text-align: justify;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .main {
+            display: flex;
+            align-items: center;
+            background-color:  rgb(118, 132, 116);
+            position: relative;
+            position: fixed;
+            z-index: 6;
+            width: 100%;
+        }
+        .icon{
+            padding-left: 10px;
+            margin-top: -6px;
+        }
+        
+        .small-container {
+            display: flex;
+            margin-left: auto;
+        }
+        .small {
+            text-align: center;
+            font-size: 25px;
+            padding: 0 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a:hover {
+            color: rgb(7, 7, 7);
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .small-container {
+                display: none;
+                flex-direction: column;
+                width: 200px;
+                position: absolute;
+                right: 10px;
+                top: 70px;
+                background-color: rgb(202, 220, 61);
+                z-index: 1000;
+            }
+            .small {
+                border-top: 1px solid #000;
+                width: 100%;
+                text-align: left;
+                padding-left: 20px;
+                
+            }
+            .small:first-child {
+                border-top: none;
+            }
+            .hamburger-menu {
+                display: block;
+                font-size: 30px;
+                cursor: pointer;
+                margin-left: auto;
+                padding: 10px;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+            }
+            .hamburger-menu::before {
+                content: "\2630";
+                display: block;
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+        
+        footer a {
+            text-decoration: none;
+            color: white;
+        }
+        footer a:hover {
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="icon"><img src="images/homeicon.jpg" style="width: 65px; height: 65px; margin-top: 6px; border: 2px solid black; border-radius: 100%;"></div>
+        <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()"></div>
+        <div class="small-container" id="menu">
+            <div class="small"><a href="home.html">Home</a></div>
+            <div class="small"><a href="about.html">About Us</a></div>
+            <div class="small"><a href="gallery.html">Gallery</a></div>
+            <div class="small"><a href="Request.html">Stay</a></div>
+            <div class="small"><a href="login.html">Login</a></div>
+            <div class="small"><a href="signup.html">Sign Up</a></div>
+        </div>
+    </div>
+
+   
+    <h1 style="margin-top: 65px;">Our Services</h1>
+
+
+    <!-- <div style="background-color: rgb(30, 198, 210); margin-top: -7px;">
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-4"><img src="images/h4.jpg" class="img-fluid" style="bRequest: 10px solid rgb(248, 245, 245); bRequest-radius: 30px;"></div>
+                <div class="col-4"><img src="images/h4.jpg" class="img-fluid" ></div>
+                <div class="col-4"><img src="images/h4.jpg" class="img-fluid" ></div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+<h1 style="background-color: rgb(63, 222, 227); margin-top: -8px;">1BHK</h1>
+<!--album-->
+
+<div class="album py-5 bg-body-tertiary"  style="background-color: deeppink; margin-top: -10px;" >
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/1bhk1.jpg" style="height: 300px;"; >
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.8000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/1bhk2.jpg"  style="height: 300px;">
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.7000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/1bhk3.jpg" style="height: 300px;">
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.6000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/1bhk4.jpg" style="height: 300px;">
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.6000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/1bhk6.jpg" style="height: 300px;">
+
+
+            <div class="card-body" style="background-color: rgb(162, 161, 162);" >
+            	<p><b>Rent-RS.7000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/1bhk5.jpg" style="height: 300px;">
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.7000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+
+<h1 style="background-color: rgb(63, 222, 227); margin-top: -8px;">2BHK</h1>
+
+<!--album-->
+
+<div class="album py-5 bg-body-tertiary"  style="background-color: rgb(232, 126, 60); margin-top: -10px;" >
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/2bhk1.jpg" style="height: 300px"; >
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.12000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/2bhk2.png" style="height: 300px" ;>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.10000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/2bhk3.webp" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.11000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/2bhk4.webp" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.14000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/2bhk6.jpeg" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.12000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/2bhk5.jpg" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.10000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+
+<h1 style="background-color: rgb(63, 222, 227); margin-top: -8px;">3BHK</h1>
+<!--album-->
+
+<div class="album py-5 bg-body-tertiary"  style="background-color: rgb(225, 225, 29); margin-top: -10px;" >
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/3bhk1.jpg" style="height: 300px"; >
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.15000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/3bhk2.jpg" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.16000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/3bhk3.webp" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.17000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/3bhk4.webp"  style="height: 300px" ;>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.15000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/3bhk6.jpg" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.16000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/3bhk5.jpg" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.17000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+
+<h1 style="background-color: rgb(63, 222, 227); margin-top: -8px;">Room</h1>
+
+<!--album-->
+
+<div class="album py-5 bg-body-tertiary"  style="background-color: rgb(67, 218, 56); margin-top: -10px;" >
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/room.jpg" style="height: 300px"; >
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.3000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/room7.jpg" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.4000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/room3.jpg" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.5000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/room9.jpg" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.4500 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/room6.jpg" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.3000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <!--<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+            <img src="images/room5.jpg" style="height: 300px";>
+
+
+            <div class="card-body"  style="background-color: rgb(162, 161, 162);">
+            	<p><b>Rent-RS.5000 per Month</b></p>
+            	
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Request.html">Request</a></button>
+                </div>
+                <!--<small class="text-body-secondary">9 mins</small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+
+    
+
+
+    
+
+
+
+
+
+
+
+    
+    <div class="flex-grow-1" style="margin-top: -50px;">
+        <!-- Your main content here -->
+    </div>
+    <footer class="bd-footer py-4 py-md-5 mt-5">
+        <div class="container-fluid py-4 py-md-5 px-4 px-md-3">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <ul class="list-unstyled small">
+                        <li class="mb-2">Designed and built with all the love in the world by the Bootstrap team with the help of our contributors</li>
+                        <li class="mb-2">Code licensed MIT, docs CC BY 3.0</li>
+                        <li class="mb-2">Currently v5.3.3.</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Home</li>
+                        <li class="mb-2">Docs</li>
+                        <li class="mb-2">Examples</li>
+                        <li class="mb-2">Icons</li>
+                        <li class="mb-2">Themes</li>
+                        <li class="mb-2">Blog</li>
+                        <li class="mb-2">Swag Store</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Guides</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Getting started</li>
+                        <li class="mb-2">Starter template</li>
+                        <li class="mb-2">Webpack</li>
+                        <li class="mb-2">Parcel</li>
+                        <li class="mb-2">Vite</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Projects</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Bootstrap 5</li>
+                        <li class="mb-2">Bootstrap 4</li>
+                        <li class="mb-2">Icons</li>
+                        <li class="mb-2">RFS</li>
+                        <li class="mb-2">Examples repo</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-3">
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Issues</li>
+                        <li class="mb-2">Discussions</li>
+                        <li class="mb-2">Corporate sponsors</li>
+                        <li class="mb-2">Open Collective</li>
+                        <li class="mb-2">Stack Overflow</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
